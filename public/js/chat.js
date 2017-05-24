@@ -42,7 +42,7 @@ $("#chatInput").on('submit', (evt) => {
     sock.emit('message', {
         room: roomId,
         uuid: uuid,
-        name: localStorage.getItem(name),
+        name: localStorage.getItem("name"),
         text: text,
         timestamp: new Date().toISOString()
     })
@@ -103,4 +103,10 @@ function guid() {
     }
     return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
         s4() + '-' + s4() + s4() + s4();
+}
+
+function changeName() {
+    name = prompt("Choose a new name");
+    name = name.trim();
+    localStorage.setItem('name', name);
 }

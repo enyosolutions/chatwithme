@@ -13,8 +13,11 @@ style="width:60%;text-align:center;margin-left: 20%;"
 
   <h2 class="text-danger">{{ title }}</h2>
   <h3  class="text-info">Share this url to start chatting with people...</h3>
+  <p>This chat room has no memory and no history. Conversation are lost when you leave or refresh the page.</p>
+  <button onClick="changeName()" class="btn btn-info">Change name</button>
+<hr/>
+<div>Enjoy!</div>
   <iframe src="https://giphy.com/embed/RQSuZfuylVNAY" width="237.5" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-
 
 
 
@@ -24,12 +27,11 @@ style="width:60%;text-align:center;margin-left: 20%;"
           <div class="col-xs-12 col-md-12">
             <div class="panel panel-default">
                   <div class="panel-heading top-bar" >
-                      <div class="col-md-8 col-xs-8">
+                      <div class="col-md-10 col-xs-10">
                           <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Chat - with the Captain</h3>
                       </div>
-                      <div class="col-md-4 col-xs-4" style="text-align: right;">
+                      <div class="col-md-2 col-xs-2" style="text-align: right;">
                           <a data-toggle="collapse" href="#text-zone"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
-                          <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
                       </div>
                   </div>
                   <div class="panel-body msg_container_base " id="text-zone">
