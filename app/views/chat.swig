@@ -3,7 +3,7 @@
 {% block content %}
 <table style="width:100%;text-align:center;">
 <tbody><tr><td style="text-align:center;">
-<img src="http://www.captainrecruiter.com/xcaptain_recruter_logo.jpg.pagespeed.ic.XRWMBgCvKI.webp"
+<img src="/img/page_speed.jpg"
 style="width:60%;text-align:center;margin-left: 20%;"
  />
 </td></tr></tbody></table>
@@ -11,7 +11,8 @@ style="width:60%;text-align:center;margin-left: 20%;"
 
 
 
-  <h1>{{ title }}</h1>
+  <h2 class="text-danger">{{ title }}</h2>
+  <h3  class="text-info">Share this url to start chatting with people...</h3>
   <iframe src="https://giphy.com/embed/RQSuZfuylVNAY" width="237.5" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 
@@ -32,7 +33,7 @@ style="width:60%;text-align:center;margin-left: 20%;"
                       </div>
                   </div>
                   <div class="panel-body msg_container_base " id="text-zone">
-
+                    <div> Hello !</div>
                   </div>
                   <div class="panel-footer">
                       <div class="input-group">

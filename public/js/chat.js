@@ -4,13 +4,13 @@ var sock;
 var roomId = btoa(document.location.hostname + document.location.pathname);
 var uuid = localStorage.captain_uuid || guid();
 var audio = new Audio('/audio.ogg');
-var name = localStorage.name || "random guest " + Math.floor((1 + Math.random()) * 0x10000)
+var name = localStorage.getItem('name') || "random guest " + Math.floor((1 + Math.random()) * 0x10000)
     .toString(16);
 
 if (originalName && originalName.length) {
     name = originalName;
 }
-localStorage.name = name;
+localStorage.setItem('name', name);
 
 $(document).on('focus', '.panel-footer input.chat_input', function(e) {
     var $this = $(this);
@@ -42,7 +42,7 @@ $("#chatInput").on('submit', (evt) => {
     sock.emit('message', {
         room: roomId,
         uuid: uuid,
-        name: localStorage.name,
+        name: localStorage.getItem(name),
         text: text,
         timestamp: new Date().toISOString()
     })

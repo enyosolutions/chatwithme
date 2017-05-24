@@ -27,7 +27,7 @@ router.get('/chat/:chatRoom', function(req, res, next) {
     console.log("");
     console.log("");
     res.render('chat', {
-        title: 'Welcome ' + req.query.name,
+        title: 'Welcome to The Captain Chat room',
         name: req.query.name
     });
 });
