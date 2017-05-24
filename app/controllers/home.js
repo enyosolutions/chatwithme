@@ -8,18 +8,18 @@ module.exports = function(app) {
 
 router.get('/', function(req, res, next) {
     var articles = [new Article(), new Article()];
+    var data = Date.now() + "-" + Math.round(Math.random() * 100000);
+    var crypto = require('crypto');
+    var room = crypto.createHash('md5').update(data).digest("hex");
     res.render('index', {
-        title: 'Captain place',
-        articles: articles
+        title: 'The Captain Chat room',
+        name: req.query.name,
+        room: room
     });
 });
 
 router.get('/chat', function(req, res, next) {
-    console.log("this");
-    res.render('index', {
-        title: 'Welcome ' + req.query.name,
-        name: req.query.name
-    });
+    res.redirect("/");
 });
 
 router.get('/chat/:chatRoom', function(req, res, next) {
